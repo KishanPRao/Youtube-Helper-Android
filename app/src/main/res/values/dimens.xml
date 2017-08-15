@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<dimen name="side_pane_width">50dp</dimen>
+	<dimen name="items_size">40dp</dimen>
+	<dimen name="items_onscreen_size">50dp</dimen>
+	<dimen name="yt_redirect_margin_start">10dp</dimen>
+	
+	<integer name="player_full_width">624</integer>
+	<integer name="player_full_height">340</integer>
+</resources>

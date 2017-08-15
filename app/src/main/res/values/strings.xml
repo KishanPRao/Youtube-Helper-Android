@@ -1,0 +1,7 @@
+<resources>
+	<string name="app_name">YouTube Helper</string>
+	<string name="youtube_package_name">com.google.android.youtube</string>
+	<string name="youtube_site">https://youtube.com</string>
+	<string name="error_no_internet">Please check your connection!</string>
+	<string name="error_no_video">Please Share a video from the YouTube app and choose this app.</string>
+</resources>

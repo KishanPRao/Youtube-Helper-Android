@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="#000"
+	tools:context="com.kishanprao.youtubehelper.MainActivity"
+	>
+	
+	<com.kishanprao.youtubehelper.YouTubeWebView
+		android:id="@+id/web_view"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		>
+		
+		<FrameLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+			
+			<ImageButton
+				android:id="@+id/full_screen"
+				android:layout_width="@dimen/items_onscreen_size"
+				android:layout_height="@dimen/items_onscreen_size"
+				android:layout_gravity="bottom|end"
+				android:background="@null"
+				android:foreground="?attr/selectableItemBackgroundBorderless"
+				android:padding="5dp"
+				android:scaleType="centerInside"
+				android:src="@drawable/ic_fullscreen_white_48dp"
+				/>
+			
+			<ImageButton
+				android:id="@+id/youtube_redirect"
+				android:layout_width="@dimen/items_onscreen_size"
+				android:layout_height="@dimen/items_onscreen_size"
+				android:layout_gravity="bottom|start"
+				android:background="@null"
+				android:foreground="?attr/selectableItemBackgroundBorderless"
+				android:padding="5dp"
+				android:scaleType="centerInside"
+				android:src="@drawable/youtube_social_icon_red_128px"
+				/>
+		</FrameLayout>
+	</com.kishanprao.youtubehelper.YouTubeWebView>
+	
+	<LinearLayout
+		android:id="@+id/left_controls"
+		android:layout_width="@dimen/side_pane_width"
+		android:layout_height="match_parent"
+		android:layout_gravity="start"
+		android:orientation="vertical"
+		android:weightSum="100"
+		>
+		
+		<VerticalSeekBar
+			android:id="@+id/volume_control"
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="70"
+			android:background="#000"
+			android:progressTint="#757575"
+			android:thumbTint="#fff"
+			/>
+		
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_weight="10"
+			android:orientation="vertical"
+			android:weightSum="3"
+			>
+			
+			<ImageButton
+				android:id="@+id/increase_speed"
+				android:layout_width="@dimen/items_size"
+				android:layout_height="@dimen/items_size"
+				android:layout_gravity="center"
+				android:layout_weight="1"
+				android:background="@null"
+				android:foreground="?attr/selectableItemBackgroundBorderless"
+				android:scaleType="centerInside"
+				android:src="@drawable/ic_add_circle_outline_white_48dp"
+				/>
+			
+			<TextView
+				android:id="@+id/current_speed"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:hint="Speed"
+				android:textColor="@color/colorAccent"
+				/>
+			
+			<ImageButton
+				android:id="@+id/decrease_speed"
+				android:layout_width="@dimen/items_size"
+				android:layout_height="@dimen/items_size"
+				android:layout_gravity="center"
+				android:layout_weight="1"
+				android:background="@null"
+				android:foreground="?attr/selectableItemBackgroundBorderless"
+				android:scaleType="centerInside"
+				android:src="@drawable/ic_remove_circle_outline_white_48dp"
+				/>
+		</LinearLayout>
+		
+		<!--TODO-->
+		<!--<Spinner-->
+			<!--android:id="@+id/quality_spinner"-->
+			<!--android:layout_width="match_parent"-->
+			<!--android:layout_height="0dp"-->
+			<!--android:layout_weight="20"-->
+			<!--android:entries="@array/quality_items"-->
+			<!--/>-->
+	</LinearLayout>
+	
+	<SeekBar
+		android:id="@+id/player_seek"
+		android:layout_width="match_parent"
+		android:layout_height="@dimen/side_pane_width"
+		android:layout_gravity="bottom"
+		android:layout_marginStart="@dimen/side_pane_width"
+		android:background="@null"
+		android:progressTint="@color/colorPrimaryDark"
+		android:thumbTint="@color/colorPrimary"
+		android:splitTrack="false"
+		/>
+	
+	<FrameLayout
+		android:id="@+id/error_layout"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="#aa9e9e9e"
+		android:visibility="gone"
+		>
+		
+		<ProgressBar
+			android:layout_width="70dp"
+			android:layout_height="70dp"
+			android:layout_gravity="center"
+			/>
+		
+		<ImageView
+			android:id="@+id/error_image"
+			android:layout_width="24dp"
+			android:layout_height="24dp"
+			android:layout_gravity="center"
+			android:scaleType="centerInside"
+			/>
+		
+		<TextView
+			android:id="@+id/error_text"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:layout_marginTop="50dp"
+			android:textColor="@android:color/black"
+			/>
+	</FrameLayout>
+
+</FrameLayout>
